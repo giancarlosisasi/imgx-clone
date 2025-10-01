@@ -4,16 +4,16 @@
 **Goal:** Get basic project structure and serve your first image
 
 ### Task 1.1: Project Initialization
-- [ ] Initialize Go module (`go mod init`)
-- [ ] Choose and set up project structure (Standard Go project layout)
-- [ ] Set up `.gitignore` and basic documentation
-- [ ] Choose HTTP framework (or use standard library)
+- [x] Initialize Go module (`go mod init`)
+- [x] Choose and set up project structure (Standard Go project layout)
+- [x] Set up `.gitignore` and basic documentation
+- [x] Choose HTTP framework (or use standard library)
 
 ### Task 1.2: Basic HTTP Server
-- [ ] Create main.go with basic HTTP server
-- [ ] Add health check endpoint (`GET /health`)
-- [ ] Set up graceful shutdown
-- [ ] Test server runs and responds
+- [x] Create main.go with basic HTTP server
+- [x] Add health check endpoint (`GET /health`)
+- [x] Set up graceful shutdown
+- [x] Test server runs and responds
 
 ### Task 1.3: Configuration Management
 - [ ] Create config structure (port, upload directory, etc.)
