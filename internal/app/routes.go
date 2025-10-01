@@ -8,7 +8,9 @@ import (
 func (app *Application) routes() *http.ServeMux {
 	mux := http.NewServeMux()
 
-	mux.HandleFunc("/health", healthHandler)
+	mux.HandleFunc("GET /health", healthHandler)
+	mux.HandleFunc("POST /v1/images/upload", app.uploadImageHandler)
+	mux.HandleFunc("GET /v1/images/{filename}", app.getImageHandler)
 
 	return mux
 }

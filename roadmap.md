@@ -16,9 +16,9 @@
 - [x] Test server runs and responds
 
 ### Task 1.3: Configuration Management
-- [ ] Create config structure (port, upload directory, etc.)
-- [ ] Load config from environment variables
-- [ ] Add validation for config values
+- [x] Create config structure (port, upload directory, etc.)
+- [x] Load config from environment variables
+- [x] Add validation for config values
 
 **Deliverable:** Running HTTP server with health check endpoint
 
@@ -28,22 +28,22 @@
 **Goal:** Accept and store images locally
 
 ### Task 2.1: File Upload Endpoint
-- [ ] Create `POST /upload` endpoint
-- [ ] Parse multipart/form-data
-- [ ] Validate file is an image (check MIME type)
-- [ ] Generate unique filename (UUID or hash)
+- [x] Create `POST /upload` endpoint
+- [x] Parse multipart/form-data
+- [x] Validate file is an image (check MIME type)
+- [x] Generate unique filename (UUID or hash)
 
 ### Task 2.2: Local Storage Implementation
-- [ ] Create storage interface for future flexibility
-- [ ] Implement local filesystem storage
-- [ ] Save uploaded images to disk
-- [ ] Return image URL/ID in response
+- [x] Create storage interface for future flexibility
+- [x] Implement local filesystem storage
+- [x] Save uploaded images to disk
+- [x] Return image URL/ID in response
 
 ### Task 2.3: Image Retrieval
-- [ ] Create `GET /images/:id` endpoint
-- [ ] Serve original images from disk
-- [ ] Handle proper Content-Type headers
-- [ ] Add error handling for missing files
+- [x] Create `GET /images/:id` endpoint
+- [x] Serve original images from disk
+- [x] Handle proper Content-Type headers
+- [x] Add error handling for missing files
 
 **Deliverable:** Can upload and retrieve images
 

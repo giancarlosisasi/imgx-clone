@@ -7,8 +7,9 @@ import (
 )
 
 type Config struct {
-	Port   int
-	AppEnv string // development, production, qa
+	Port           int
+	AppEnv         string // development, production, qa
+	ImageUploadDir string
 }
 
 func NewConfig() *Config {
@@ -23,8 +24,9 @@ func NewConfig() *Config {
 	appEnv := mustGetString("APP_ENV")
 
 	return &Config{
-		Port:   port,
-		AppEnv: appEnv,
+		Port:           port,
+		AppEnv:         appEnv,
+		ImageUploadDir: "./uploads",
 	}
 
 }
