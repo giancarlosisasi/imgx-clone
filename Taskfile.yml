@@ -10,3 +10,34 @@ tasks:
     cmds:
       - air
     silent: true
+
+  docker:dev:
+    desc: Run development server in docker with hot reload
+    cmds:
+      - docker compose up
+  docker:dev:build:
+    desc: Rebuild development docker image
+    cmds:
+      - docker compose up --build
+  docker:dev:down:
+    desc: Stop docker development environment
+    cmds:
+      - docker-compose down
+  docker:dev:logs:
+    desc: View docker logs
+    cmds:
+      - docker-compose logs -f app
+
+  clean:
+    cmds:
+      - rm -rf tmp/
+      - rm rf build-errors.log
+    platforms:
+      - linux/amd64
+      - darwin/amd64
+  clean:windows:
+    cmds:
+      - rm -r tmp/
+      - rm -r build-errors.log
+    platforms:
+      - windows/amd64

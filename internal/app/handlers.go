@@ -113,8 +113,6 @@ func (app *Application) getImageHandler(w http.ResponseWriter, r *http.Request) 
 	// set cache header for performance
 	w.Header().Set("Cache-Control", "public, max-age=86400") // 24 hours
 
-	app.commitHeadersAndWriteStatus(w, http.StatusOK)
-
 	http.ServeFile(w, r, fp)
 }
 
