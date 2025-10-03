@@ -111,7 +111,9 @@ func (app *Application) getImageHandler(w http.ResponseWriter, r *http.Request) 
 	w.Header().Set("Content-Disposition", fmt.Sprintf("inline; filename=\"%s\"", encodedFilename))
 
 	// set cache header for performance
-	w.Header().Set("Cache-Control", "public, max-age=86400") // 24 hours
+	if app.config.AppEnv == "production" {
+		w.Header().Set("Cache-Control", "public, max-age=86400") // 24 hours
+	}
 
 	http.ServeFile(w, r, fp)
 }
